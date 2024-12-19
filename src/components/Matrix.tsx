@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 
-const Matrix = () => {
+const matrix = () => {
     const [boxes, setBoxes] = useState(Array(9).fill(null).map(() => ({ color: 'blue', clicked: false })));
     const[clickedOrder, setClickedOrder] = useState<number[]>([]);
 
@@ -63,7 +63,7 @@ const changeToOrangeSequence = (indices:number[]) => {
   )
 }
 
-export default Matrix
+export default matrix
 
 
 
