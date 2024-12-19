@@ -10,7 +10,7 @@ const matrix = () => {
     const [boxes, setBoxes] = useState(Array(9).fill(null).map(() => ({ color: 'blue', clicked: false })));
     const[clickedOrder, setClickedOrder] = useState<number[]>([]);
 
-const handleClick = (index: number) => (event: React.MouseEvent<HTMLDivElement>) =>{
+const handleClick = (index: number) => (_event: React.MouseEvent<HTMLDivElement>) =>{
 
     if(boxes[index].clicked) return;
     
