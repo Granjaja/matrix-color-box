@@ -6,11 +6,11 @@ import { useState } from "react";
 
 
 
-const matrix = () => {
+const Matrix = () => {
     const [boxes, setBoxes] = useState(Array(9).fill(null).map(() => ({ color: 'blue', clicked: false })));
     const[clickedOrder, setClickedOrder] = useState<number[]>([]);
 
-const handleClick = (index: number) => (_event: React.MouseEvent<HTMLDivElement>) =>{
+const handleClick = (index: number) => {
 
     if(boxes[index].clicked) return;
     
@@ -50,7 +50,7 @@ const changeToOrangeSequence = (indices:number[]) => {
         <div 
         key={index} 
         className={` h-20 w-20 ${box.color === 'green'? 'bg-green-500' : box.color ==='orange'? 'bg-orange-500': 'bg-sky-500'}  `}
-        onClick={handleClick(index)}
+        onClick={() => handleClick(index)}
         
         />
       ))}
@@ -63,7 +63,7 @@ const changeToOrangeSequence = (indices:number[]) => {
   )
 }
 
-export default matrix
+export default Matrix
 
 
 
